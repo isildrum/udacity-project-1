@@ -1,0 +1,37 @@
+## Docker commands used to build the application 
+# TODO: insert the docker build command
+docker build -t techtrends -f ./Dockerfile ./techtrends
+
+## Docker commands used to run the application
+# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+# TODO: insert the docker logs command
+docker logs b41e870b3666e49d4f0d8ac8953a7a69c71d88ffb7d8445eea8f2ac249803585
+
+## Logs from the container running the TechTrends application
+# TODO: paste logs from the Docker container 
+D:\Users\Isidro\Documents\git_cnf\nd064_course_1\project>docker logs b41e870b3666e49d4f0d8ac8953a7a69c71d88ffb7d8445eea8f2ac249803585
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 726-743-672
+172.17.0.1 - - [19/Aug/2021 21:13:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [19/Aug/2021 21:13:10] "GET /static/css/main.css HTTP/1.1" 200 -
+172.17.0.1 - - [19/Aug/2021 21:13:11] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [19/Aug/2021 21:13:50] "GET /create HTTP/1.1" 200 -
+[2021-08-19 21:14:05,757] INFO in app: A new post was created. The title is Test Docker
+172.17.0.1 - - [19/Aug/2021 21:14:05] "POST /create HTTP/1.1" 302 -
+172.17.0.1 - - [19/Aug/2021 21:14:05] "GET / HTTP/1.1" 200 -
+[2021-08-19 21:14:08,607] INFO in app: Article Test Docker retrieved!
+172.17.0.1 - - [19/Aug/2021 21:14:08] "GET /7 HTTP/1.1" 200 -
+[2021-08-19 21:14:24,271] INFO in app: Metrics endpoint was reached
+172.17.0.1 - - [19/Aug/2021 21:14:24] "GET /metrics HTTP/1.1" 200 -
+[2021-08-19 21:14:40,629] INFO in app: Healthz endpoint was reached
+172.17.0.1 - - [19/Aug/2021 21:14:40] "GET /healthz HTTP/1.1" 200 -
