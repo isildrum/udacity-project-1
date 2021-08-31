@@ -1,0 +1,35 @@
+namespace:
+  name: prod
+ 
+image:
+  repository: isildrum/techtrends 
+  tag: latest
+  pullPolicy: Always
+
+replicaCount: 5
+
+containerPort: 3111
+
+livenesProbe:
+  path: /healthz
+
+readinesProbe:
+  path: /healthz
+
+service:
+  port: 7111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+  
+resources:
+  requests:
+    cpu: 350m
+    memory: 128Mi
+
+limits:
+  requests:
+    cpu: 500m
+    memory: 256Mi
+
+
