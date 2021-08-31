@@ -10,7 +10,7 @@ replicaCount: 5
 
 containerPort: 3111
 
-livenesProbe:
+livenessProbe:
   path: /healthz
 
 readinessProbe:
