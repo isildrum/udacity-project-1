@@ -10,10 +10,10 @@ replicaCount: 3
 
 containerPort: 3111
 
-livenesProbe:
+livenessProbe:
   path: /healthz
 
-readinesProbe:
+readinessProbe:
   path: /healthz
 
 service:
@@ -26,9 +26,7 @@ resources:
   requests:
     cpu: 300m
     memory: 90Mi
-
-limits:
-  requests:
-    cpu: 500m
-    memory: 128Mi
+  limits:
+      cpu: 500m
+      memory: 128Mi
 
